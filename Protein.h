@@ -4,10 +4,9 @@
 
 #ifndef PROTEIN_H
 #define PROTEIN_H
-#include "CodonsTable.h"
-//#include "DNA.h"
 #include "Sequence.h"
-class DNA;
+#include "CodonsTable.h"
+#include "DNA.h"
 using namespace std;
 enum Protein_Type {Hormon, Enzyme, TF, Cellular_Function};
 

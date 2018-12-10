@@ -4,11 +4,14 @@
 
 
 #include "Sequence.h"
-//#include "DNA.h"
 #include "CodonsTable.h"
+
+
+#include "DNA.h"
 #include "Protein.h"
+
+
 #include <bits/stdc++.h>
-class DNA;
 using namespace std;
 
 enum RNA_Type {mRNA, pre_mRNA, mRNA_exon, mRNA_intron};

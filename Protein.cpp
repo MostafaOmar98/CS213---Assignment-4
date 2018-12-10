@@ -6,7 +6,7 @@
  * TODO:
  * implement templates
  */
-
+class DNA;
 #include "Protein.h"
 #define MAX_SIZE 10000
 Protein::Protein()

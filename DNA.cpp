@@ -1,4 +1,7 @@
 #include "DNA.h"
+class RNA;
+class Protein;
+
 
 using namespace std;
 DNA :: DNA () {
@@ -77,15 +80,15 @@ DNA DNA::getCSDNA() const
 {
     return *complementary_strand;
 }
-RNA DNA ::ConvertToRNA(){/// change the complementary strand to RNA by replacing each T by U
+RNA* DNA ::ConvertToRNA(){/// change the complementary strand to RNA by replacing each T by U
     char * retseq = new char[complementary_strand->len +1];
     strcpy(retseq , complementary_strand->seq); /// copying the complementary seq then converting it
     for(int i = startIndex ; i < endIndex ; ++i){
         if(retseq[i] =='T' || retseq[i] =='t')
             retseq[i] = 'U';
     }
-    RNA ret(retseq , mRNA);         /// mRNA came from converting the DNA
-    return ret;
+//    RNA ret(retseq , mRNA);         /// mRNA came from converting the DNA
+//    return ret;
 }
 /// done with class if you need templates you need to add here the data types  used
 /// for e.q vector <int >
