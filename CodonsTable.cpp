@@ -14,7 +14,8 @@ using namespace std;
 // constructors and destructor
 CodonsTable::CodonsTable()
 {
-    LoadCodonsFromFile("RNA_codon_table");
+    char fileName[] = "RNA_codon_table";
+    LoadCodonsFromFile(fileName);
 }
 CodonsTable::~CodonsTable() {}
 // function to load all codons from the given text file
@@ -34,12 +35,12 @@ void CodonsTable::LoadCodonsFromFile(char* codonsFileName)
         ++i;
     }
 }
-Codon CodonsTable::getAminoAcid(char * value)
+char CodonsTable::getAminoAcid(char * value)
 {
     for (int i = 0; i < 64; ++i)
     {
         if (codons[i].value == value)
-            return codons[i];
+            return codons[i].AminoAcid;
     }
     // Throw exception here if not found
 }
