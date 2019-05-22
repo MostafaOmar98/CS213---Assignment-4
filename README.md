@@ -1,3 +1,3 @@
-# CS213---Assignment-4
+# Biological Strands Processing System
 
 Biological Strands processing system using OOP concepts.
